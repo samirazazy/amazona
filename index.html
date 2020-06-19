@@ -1,0 +1,114 @@
+<!DOCTYPE html <html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Amazona</title>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <div class="brand">
+        <button onclick="openMenu()">&#9776;</button>
+        <a href="index.html">Amazona</a>
+      </div>
+      <div class="header-links">
+        <a href="">Cart</a>
+        <a href="">SignIn</a>
+      </div>
+    </header>
+    <aside class="sidbare">
+      <h3>Shopping Cart</h3>
+      <button class="sidbare-colose-button " onclick="closeMenu()">
+        X
+      </button>
+      <ul>
+        <li>
+          <a href="">Pants</a>
+        </li>
+        <li>
+          <a href="">T Shirts</a>
+        </li>
+      </ul>
+    </aside>
+    <main class="main">
+      <div class="content">
+        <ul class="products">
+          <li>
+            <div class="product">
+              <img class="product-image" src="images/1.jpg" />
+              <div class="product-name">
+                <a href="">slim shirt</a>
+              </div>
+              <div class="product-brand">Nike</div>
+              <div class="product-price">$556</div>
+              <div class="product-rating">4.5 Starts (10 reviows)</div>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img class="product-image" src="images/1.jpg" />
+              <div class="product-name">
+                <a href="">slim shirt</a>
+              </div>
+              <div class="product-brand">Nike</div>
+              <div class="product-price">$556</div>
+              <div class="product-rating">4.5 Starts (10 reviows)</div>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img class="product-image" src="images/1.jpg" />
+              <div class="product-name">
+                <a href="">slim shirt</a>
+              </div>
+              <div class="product-brand">Nike</div>
+              <div class="product-price">$556</div>
+              <div class="product-rating">4.5 Starts (10 reviows)</div>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img class="product-image" src="images/1.jpg" />
+              <div class="product-name">
+                <a href="">slim shirt</a>
+              </div>
+              <div class="product-brand">Nike</div>
+              <div class="product-price">$556</div>
+              <div class="product-rating">4.5 Starts (10 reviows)</div>
+            </div>
+          </li>
+          <li>
+            <div class="product">
+              <img class="product-image" src="images/1.jpg" />
+              <div class="product-name">
+                <a href="">slim shirt</a>
+              </div>
+              <div class="product-brand">Nike</div>
+              <div class="product-price">$556</div>
+              <div class="product-rating">4.5 Starts (10 reviows)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      All rights reserved?
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.querySelector(".sidbare").classList.add('open')
+      console.log('open')
+    }
+    function closeMenu() {
+      document.querySelector(".sidbare").classList.remove('open')
+      console.log('close')
+    }
+  </script>
+</body>
+
+</html>
