@@ -17,6 +17,11 @@ function ProductScreen(props) {
       //
     };
   }, [dispatch, props.match.params.id]);
+
+  const handelAddToCart = () => {
+    props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
+  };
+
   return (
     <div>
       <div className='back-to-result'>
@@ -51,10 +56,15 @@ function ProductScreen(props) {
           </div>
           <div className='details-action'>
             <ul>
-              <li>Price:${product.price}</li>
-              <li>Status: {product.status}</li>
+              <li>Price: ${product.price}</li>
               <li>
-                QTY:
+                Status:{" "}
+                {product.countInStock > 0
+                  ? product.countInStock
+                  : "Unavailable"}
+              </li>
+              <li>
+                QTY:{" "}
                 <select
                   value={qty}
                   onChange={(e) => {
@@ -69,7 +79,11 @@ function ProductScreen(props) {
                 </select>
               </li>
               <li>
-                <button className='button primary'>Add to cart</button>
+                {product.countInStock > 0 && (
+                  <button onClick={handelAddToCart} className='button primary'>
+                    Add to cart
+                  </button>
+                )}
               </li>
             </ul>
           </div>
